@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ToDo>
+
+<h2>Tasks: </h2>
+
+@foreach (var item in Model)
+{
+    <br />
+    <div style="border: 3px solid black">
+
+        <h5>@item.Task_Name</h5>
+        <ul>
+            <li>
+                @item.Task_Description
+            </li>
+        </ul>
+        @if (item.Employee != null)
+        {
+            <p>Assigned to: @item.Employee.FullName (ID:@item.Employee.Employee_Id)</p>
+        }
+        else
+        {
+            <p>Unassigned</p>
+        }
+    </div>
+}

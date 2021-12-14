@@ -1,0 +1,27 @@
+﻿@model Employee
+
+<h2>Edit @Model.FullName</h2>
+<br />
+<form asp-action="EditEmployee" method="post">
+    <label asp-for="FullName" class="control-label"></label>
+    <input value="@Model.FullName" asp-for="FullName" class="form-control" />
+    <span asp-validation-for="FullName" class="text-danger"></span><br /><br />
+
+    <label asp-for="Title" class="control-label"></label>
+    <input value="@Model.Title" asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span><br /><br />
+
+    <label asp-for="Hours" class="control-label"></label>
+    <input value="@Model.Hours" asp-for="Hours" class="form-control" />
+    <span asp-validation-for="Hours" class="text-danger"></span><br /><br />
+
+    <input type="hidden" value="@Model.Employee_Id" asp-for="Employee_Id"/>
+
+    <input type="submit"/>
+</form>
+<br />
+<a asp-action="Index" asp-controller="Employee"><button>Cancel</button></a>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 
