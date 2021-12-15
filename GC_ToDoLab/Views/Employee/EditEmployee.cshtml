@@ -15,7 +15,7 @@
     <input value="@Model.Hours" asp-for="Hours" class="form-control" />
     <span asp-validation-for="Hours" class="text-danger"></span><br /><br />
 
-    
+    <input type="hidden" value="@Model.Employee_Id" asp-for="Employee_Id" />
 
     <input type="submit"/>
 </form>
