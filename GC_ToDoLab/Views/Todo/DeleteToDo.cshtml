@@ -1,0 +1,15 @@
+﻿@model ToDo
+
+<h2>@Model.Task_Name</h2>
+<ul>
+    <li>@Model.Task_Description</li>
+    <li>@Model.Hours_Needed to complete</li>
+    <li>Assigned to employee ID @Model.Assigned_To</li>
+</ul>
+<h5>Are you sure you want to remove this task?</h5>
+<div style="padding-top: 15px; padding-bottom: 20px">
+    <form asp-action="DeleteToDoFromDB" asp-controller="Todo" asp-route-id="@Model.Todo_Id">
+        <input type="submit" value="Yes" />
+    </form>
+</div>
+<a asp-action="Index" asp-controller="Todo"><button>No</button></a>

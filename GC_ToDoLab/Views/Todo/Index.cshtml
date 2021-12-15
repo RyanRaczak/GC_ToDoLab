@@ -2,24 +2,42 @@
 
 <h2>Tasks: </h2>
 
+<div style="padding-top: 10px; padding-bottom: 10px">
+    <a asp-action="CreateTask" asp-controller="Todo"><button>Create Task</button></a>
+</div>
+
 @foreach (var item in Model)
 {
     <br />
-    <div style="border: 3px solid black">
+    <div style="border: 3px solid black; padding-left: 10px; padding-top: 10px; padding-bottom: 10px">
 
         <h5>@item.Task_Name</h5>
         <ul>
             <li>
                 @item.Task_Description
             </li>
+            <li>
+                @item.Hours_Needed hours required
+            </li>
         </ul>
-        @if (item.Employee != null)
+        @if (item.Is_Completed)
         {
-            <p>Assigned to: @item.Employee.FullName (ID:@item.Employee.Employee_Id)</p>
+            <p>Status: ✅</p>
+        }
+        else
+        {
+            <p>Status: ❌</p>
+        }
+        @if (item.Assigned_To != 0)
+        {
+            <p>Assigned to ID: @item.Assigned_To</p>
         }
         else
         {
             <p>Unassigned</p>
         }
+        <a asp-action="AssignTask" asp-controller="Todo" asp-route-id="@item.Todo_Id"><button>Assign Task</button></a>&nbsp; &nbsp;
+        <a asp-action="EditComplete" asp-controller="Todo" asp-route-id="@item.Todo_Id"><button>Update Status</button></a>&nbsp; &nbsp;
+        <a asp-action="DeleteToDo" asp-controller="Todo" asp-route-id="@item.Todo_Id"><button>Delete Task</button></a>
     </div>
 }

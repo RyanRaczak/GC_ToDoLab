@@ -43,3 +43,8 @@ C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreap
 C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
 C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreapp3.1\Razor\Views\Employee\CreateEmployee.cshtml.g.cs
 C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreapp3.1\Razor\Views\Employee\EditEmployee.cshtml.g.cs
+C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreapp3.1\Razor\Views\Todo\AssignTask.cshtml.g.cs
+C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreapp3.1\Razor\Views\Todo\EditComplete.cshtml.g.cs
+C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreapp3.1\Razor\Views\Todo\CreateTask.cshtml.g.cs
+C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreapp3.1\Razor\Views\Employee\DeleteEmployee.cshtml.g.cs
+C:\Users\RRaczak\source\repos\DevBuild\GC_ToDoLab\GC_ToDoLab\obj\Debug\netcoreapp3.1\Razor\Views\Todo\DeleteToDo.cshtml.g.cs

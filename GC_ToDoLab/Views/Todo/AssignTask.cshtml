@@ -1,0 +1,26 @@
+﻿@model ToDo
+
+<h2>@Model.Task_Name</h2><br />
+<h6>&nbsp &nbsp • @Model.Task_Description</h6>
+<h6>&nbsp &nbsp • @Model.Hours_Needed hours needed</h6>
+<br />
+<div>
+    <form asp-action="AssignTask" method="post">
+        <p>Assign to:</p>
+        <select asp-for="Assigned_To">
+            <option value="" disabled selected hidden>Select Employee</option>
+            @foreach (var item in Model.Employee)
+            {
+                <option value="@item.Employee_Id">@item.FullName (@item.Hours hrs)</option>
+            }
+            <option value="0">Unassign All</option>
+        </select>&nbsp &nbsp
+        <input type="submit" value="Apply" />
+
+        <input type="hidden" value="@Model.Todo_Id" asp-for="Todo_Id" />
+        <input type="hidden" value="@Model.Task_Name" asp-for="Task_Name" />
+        <input type="hidden" value="@Model.Task_Description" asp-for="Task_Description" />
+        <input type="hidden" value="@Model.Hours_Needed" asp-for="Hours_Needed" />
+        <input type="hidden" value="@Model.Is_Completed" asp-for="Is_Completed" />
+    </form>
+</div>

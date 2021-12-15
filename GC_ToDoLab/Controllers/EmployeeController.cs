@@ -41,7 +41,18 @@ namespace GC_ToDoLab.Controllers
             return RedirectToAction("Index");
         }
         
+        public IActionResult DeleteEmployee(int id)
+        {
+            Employee emp = db.GetEmployee(id);
+            return View(emp);
+        }
 
+        [HttpPost]
+        public IActionResult DeleteEmployeeFromDB(int id)
+        {
+            db.RemoveEmployee(id);
+            return RedirectToAction("Index");
+        }
 
     }
 }

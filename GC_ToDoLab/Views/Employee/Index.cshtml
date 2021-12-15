@@ -1,12 +1,14 @@
 ﻿@model IEnumerable<Employee>
 
-<a asp-action="CreateEmployee" asp-controller="Employee"><button>Add Employee</button></a>
+<h2>Employees: </h2>
 
-<h2>Employees:</h2>
+<div style="padding-top: 10px; padding-bottom: 10px">
+    <a asp-action="CreateEmployee" asp-controller="Employee"><button>Add Employee</button></a>
+</div>
 @foreach (var item in Model)
 {
     <br />
-    <div style="border: 2px solid black">
+    <div style="border: 3px solid black; padding-left: 10px; padding-top: 10px; padding-bottom: 10px">
         <h5>@item.FullName</h5>
         <ul>
             <li>
@@ -19,7 +21,7 @@
                 ID: @item.Employee_Id
             </li>
         </ul>
-        <a asp-action="EditEmployee" asp-controller="Employee" asp-route-id="@item.Employee_Id"><button>Edit</button></a><br />
-        <a asp-action="DeleteEmployee" asp-controller="Employee" asp-route-id="@item.Employee_Id"><button>Delete</button></a><br />
+        <a asp-action="EditEmployee" asp-controller="Employee" asp-route-id="@item.Employee_Id"><button>Edit</button></a> &nbsp; &nbsp;
+        <a asp-action="DeleteEmployee" asp-controller="Employee" asp-route-id="@item.Employee_Id"><button>Delete</button></a>
     </div>
 }
